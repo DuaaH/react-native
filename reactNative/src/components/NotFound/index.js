@@ -12,8 +12,13 @@ import {
 } from 'react-native';
 
 class NotFound extends React.Component {
-  state = {};
+  static navigationOptions = {
+    header: null,
+  };
+
   render() {
+    console.log('not');
+
     return (
       <View>
         <Text>notFound</Text>

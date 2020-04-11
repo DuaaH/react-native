@@ -7,6 +7,7 @@ import {
   FlatList,
   Image,
   ScrollView,
+  Button,
 } from 'react-native';
 import Projects from '../Projects';
 import Skills from '../Skills';
@@ -14,6 +15,14 @@ import Personal from '../Personal';
 import Footer from '../Footer';
 
 class ProjectsPage extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
+  moveTo = () => {
+    this.props.navigation.navigate('NotFound');
+  };
+
   render() {
     return (
       <ScrollView>
@@ -24,6 +33,7 @@ class ProjectsPage extends React.Component {
           <Personal />
           <Skills />
           <Projects />
+          <Footer moveTo={this.moveTo} />
         </View>
       </ScrollView>
     );

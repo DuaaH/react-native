@@ -2,17 +2,13 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 class Footer extends React.Component {
-  clicked = () => {
-    alert('in progress');
-  };
-
   render() {
     return (
       <View style={styles.footer_view}>
-        <TouchableOpacity style={styles.btn} onPress={this.clicked}>
+        <TouchableOpacity style={styles.btn} onPress={this.props.moveTo}>
           <Text style={styles.text_home}>Home</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={this.clicked}>
+        <TouchableOpacity style={styles.btn} onPress={this.props.moveTo}>
           <Text style={styles.text_home}>Profile</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.btn}>
@@ -26,16 +22,17 @@ class Footer extends React.Component {
             Projects
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={this.clicked}>
+        <TouchableOpacity style={styles.btn} onPress={this.props.moveTo}>
           <Text style={styles.text_home}>Time</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btn} onPress={this.clicked}>
+        <TouchableOpacity style={styles.btn} onPress={this.props.moveTo}>
           <Text style={styles.text_home}>Budge</Text>
         </TouchableOpacity>
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
   footer_view: {
     flex: 1,
@@ -43,7 +40,6 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     height: 40,
-    bottom: -26,
     paddingVertical: 0,
   },
   btn: {
