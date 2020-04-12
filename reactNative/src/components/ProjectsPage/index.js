@@ -24,16 +24,14 @@ class ProjectsPage extends React.Component {
   };
 
   render() {
+    console.log('hi');
+
     return (
       <ScrollView>
         <View style={styles.page}>
-          <View style={styles.menu}>
-            <Text>menu</Text>
-          </View>
           <Personal />
           <Skills />
           <Projects />
-          <Footer moveTo={this.moveTo} />
         </View>
       </ScrollView>
     );

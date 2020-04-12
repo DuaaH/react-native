@@ -11,7 +11,7 @@ import {
   ScrollView,
 } from 'react-native';
 
-class NotFound extends React.Component {
+class Home extends React.Component {
   static navigationOptions = {
     header: null,
   };
@@ -19,11 +19,11 @@ class NotFound extends React.Component {
   render() {
     return (
       <View>
-        <Text>notFound</Text>
+        <Text>Home</Text>
       </View>
     );
   }
 }
 // const styles = StyleSheet.create({});
 
-export default NotFound;
+export default Home;
